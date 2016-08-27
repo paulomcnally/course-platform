@@ -1,10 +1,10 @@
+{?courses}
+{#courses}
 <li>
-  <a href="javascript:void(0)" class="waves-effect waves-teal">
-    {@message type="content" key="nav.sign_in"/}
+  <a href="/courses/{slug}" class="waves-effect waves-teal">
+    <i class="fa {icon}" aria-hidden="true"></i>
+    {@message type="content" key=slug /}
   </a>
 </li>
-<li>
-  <a href="javascript:void(0)" class="waves-effect waves-teal">
-    {@message type="content" key="nav.sign_up"/}
-  </a>
-</li>
+{/courses}
+{/courses}
