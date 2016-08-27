@@ -4,7 +4,7 @@
   "description": "Online courses",
   "main": "index.js",
   "scripts": {
-    "debug": "nodemon -e js,dust,properties",
+    "debug": "DEBUG=app:* nodemon -e js,dust,properties",
     "start": "node index.js",
     "test": "mocha"
   },
@@ -26,18 +26,22 @@
   },
   "dependencies": {
     "adaro": "1.0.4",
+    "debug": "2.2.0",
     "dust-makara-helpers": "4.1.2",
     "express": "4.14.0",
     "express-enrouten": "1.3.0",
-    "makara": "2.0.3"
+    "makara": "2.0.3",
+    "pg": "6.1.0",
+    "pg-hstore": "2.3.2",
+    "redis": "2.6.2",
+    "sequelize": "3.24.1",
+    "sequelize-cacher": "1.3.2"
   },
   "devDependencies": {
     "gulp": "3.9.1",
     "gulp-clean-css": "2.0.12",
     "gulp-concat": "2.6.0",
     "gulp-rename": "1.2.2",
-    "gulp-sass": "2.3.2",
-    "gulp-sass-glob": "1.0.6",
     "gulp-uglify": "2.0.0"
   }
 }

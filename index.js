@@ -7,7 +7,9 @@ const path = require('path');
 const port = process.env.PORT || 5000;
 
 // view
-let helpers = [ 'dust-makara-helpers' ];
+let helpers = [
+  'dust-makara-helpers'
+];
 app.engine('dust', makara.dust({
   cache: false,
   helpers: helpers
