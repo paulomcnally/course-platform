@@ -1,0 +1,22 @@
+{
+  "name": "chocoyo",
+  "version": "0.0.1",
+  "description": "Online courses",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://paulomcnally@bitbucket.org/chocoyo/web-app.git"
+  },
+  "keywords": [
+    "online",
+    "courses",
+    "learn",
+    "video"
+  ],
+  "author": "Paulo McNally <paulo.mcnally@chocoyolabs.com>",
+  "license": "Apache-2.0",
+  "homepage": "https://bitbucket.org/chocoyo/web-app#readme"
+}
