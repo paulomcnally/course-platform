@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const adaro = require('adaro');
 const makara = require('makara');
+const enrouten = require('express-enrouten');
 const path = require('path');
 const port = process.env.PORT || 5000;
 
@@ -22,12 +23,13 @@ app.use(makara({
   }
 }));
 
+// routes
+app.use(enrouten({
+  directory: 'app/controllers'
+}));
+
 // public
 app.use(express.static('app/assets'));
-
-app.get('/', (req, res) => {
-  res.render('index');
-});
 
 // listen
 app.listen(port, () => {
