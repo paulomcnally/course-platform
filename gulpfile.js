@@ -4,7 +4,11 @@ var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var cleanCSS = require('gulp-clean-css');
 
-var jsFiles = 'vendor/javascripts/**/*.js',
+var jsFiles =  [
+  'vendor/javascripts/jquery-2.1.1.js',
+  'vendor/javascripts/materialize.min.js',
+  'vendor/javascripts/app.js'
+],
 jsDest = 'app/assets/javascripts';
 
 var cssFiles = 'vendor/stylesheets/*.css',
