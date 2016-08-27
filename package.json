@@ -4,7 +4,7 @@
   "description": "Online courses",
   "main": "index.js",
   "scripts": {
-    "debug": "nodemon -e js,dust",
+    "debug": "nodemon -e js,dust,properties",
     "start": "node index.js",
     "test": "mocha"
   },

@@ -1,0 +1,14 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="javascript:void(0)" class="brand-logo">{@message type="content" key="nav.logo"/}</a>
+    <a href="#" data-activates="mobile-nav" class="button-collapse">
+      <i class="material-icons">menu</i>
+    </a>
+    <ul class="right hide-on-med-and-down">
+      {>"layouts/nav_right" /}
+    </ul>
+    <ul class="side-nav" id="mobile-nav">
+      {>"layouts/nav_right" /}
+    </ul>
+  </div>
+</nav>

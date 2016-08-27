@@ -11,7 +11,10 @@ var jsFiles =  [
 ],
 jsDest = 'app/assets/javascripts';
 
-var cssFiles = 'vendor/stylesheets/*.css',
+var cssFiles = [
+  'vendor/stylesheets/materialize.min.css',
+  'vendor/stylesheets/base.css'
+];
 cssDest = 'app/assets/stylesheets';
 
 // javascripts
