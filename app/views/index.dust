@@ -6,4 +6,5 @@ Chocoyo: Cursos en línea
 
 {<body}
 Inicio
+{@message type="content" key="index.title"/}
 {/body}
