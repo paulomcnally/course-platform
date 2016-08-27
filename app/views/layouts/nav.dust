@@ -1,14 +1,23 @@
 <nav>
   <div class="nav-wrapper">
-    <a href="javascript:void(0)" class="brand-logo">{@message type="content" key="nav.logo"/}</a>
+    <a href="javascript:void(0)" class="brand-logo hide-on-large-only">{@message type="content" key="nav.logo"/}</a>
     <a href="#" data-activates="mobile-nav" class="button-collapse">
       <i class="material-icons">menu</i>
     </a>
-    <ul class="right hide-on-med-and-down">
-      {>"layouts/nav_right" /}
-    </ul>
-    <ul class="side-nav" id="mobile-nav">
-      {>"layouts/nav_right" /}
-    </ul>
+    <div class="row">
+      <div class="input-field input-field-search col s9 hide-on-med-and-down">
+        <input class="left" id="searchTop" type="search" placeholder="{@message type="content" key="search_placeholder"/}" required>
+        <label for="search"><i class="material-icons">search</i></label>
+        <i class="material-icons">close</i>
+      </div>
+      <ul class="right hide-on-med-and-down">
+        {>"layouts/nav-right" /}
+      </ul>
+      <ul class="side-nav" id="mobile-nav">
+        {>"layouts/nav-auth" /}
+        {>"layouts/nav-categories" /}
+      </ul>
+    </div>
+
   </div>
 </nav>

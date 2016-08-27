@@ -1,0 +1,14 @@
+<li class="vertical-separator hide-on-med-and-down">
+</li>
+<li>
+  <a href="javascript:void(0)">
+    {@message type="content" key="sign_in"/}
+  </a>
+</li>
+<li class="vertical-separator hide-on-med-and-down">
+</li>
+<li>
+  <a href="javascript:void(0)">
+    {@message type="content" key="sign_up"/}
+  </a>
+</li>

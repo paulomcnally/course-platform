@@ -11,8 +11,13 @@
   <link type="text/css" rel="stylesheet" href="/stylesheets/application.min.css"  media="screen,projection"/>
 </head>
 <body>
-  {>"layouts/nav" /}
-  {+body /}
+  {>"layouts/side-nav" /}
+  <main>
+    {>"layouts/nav" /}
+    <div class="container">
+      {+body /}
+    </div>
+  </main>
   <!--Import js-->
   <script type="text/javascript" src="/javascripts/application.min.js"></script>
 </body>

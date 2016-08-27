@@ -1,4 +1,6 @@
 $(document).on('ready', function() {
   // nav
-  $(".button-collapse").sideNav();
+  $(".button-collapse").sideNav({
+    closeOnClick: true
+  });
 });
