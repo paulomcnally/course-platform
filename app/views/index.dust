@@ -1,10 +1,9 @@
 {>"layouts/master" /}
 
 {<title}
-Chocoyo: Cursos en línea
+{@message type="content" key="index.title"/}
 {/title}
 
 {<body}
 Inicio
-{@message type="content" key="index.title"/}
 {/body}
