@@ -1,0 +1,9 @@
+{>"layouts/master" /}
+
+{<title}
+Chocoyo: Cursos en línea
+{/title}
+
+{<body}
+Inicio
+{/body}
