@@ -1,0 +1,40 @@
+{
+  "name": "chocoyo",
+  "version": "0.0.1",
+  "description": "Online courses",
+  "main": "index.js",
+  "scripts": {
+    "debug": "nodemon -e js,dust",
+    "start": "node index.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://paulomcnally@bitbucket.org/chocoyo/web-app.git"
+  },
+  "keywords": [
+    "online",
+    "courses",
+    "learn",
+    "video"
+  ],
+  "author": "Paulo McNally <paulo.mcnally@chocoyolabs.com>",
+  "license": "Apache-2.0",
+  "homepage": "https://bitbucket.org/chocoyo/web-app#readme",
+  "engines": {
+    "node": "6.4.0"
+  },
+  "dependencies": {
+    "adaro": "1.0.4",
+    "express": "4.14.0"
+  },
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-clean-css": "2.0.12",
+    "gulp-concat": "2.6.0",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "2.3.2",
+    "gulp-sass-glob": "1.0.6",
+    "gulp-uglify": "2.0.0"
+  }
+}
