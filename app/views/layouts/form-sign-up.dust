@@ -2,6 +2,7 @@
 <div id="modalSignUp" class="modal modal-sign-up" ng-controller="AuthController">
   <div class="modal-content">
     <div ng-show="showSuccess" class="center">
+      <i class="fa fa-times fa-2x right modal-close" aria-hidden="true"></i>
       <img src="/images/ic_success_done.png" alt="Success" />
       <h5 class="center">{@message type="content" key="success_first"/} <b>{{ user.email }}</b> {@message type="content" key="success_last"/}</h5>
       <p>{@message type="content" key="success_footer"/}</p>
@@ -11,7 +12,7 @@
         </a>
       </div>
     </div>
-    <div ng-false="showSuccess">
+    <div ng-hide="showSuccess">
       <i class="fa fa-times fa-2x right modal-close" aria-hidden="true"></i>
       <h5 class="center">{@message type="content" key="header"/}</h5>
       <div class="row">
