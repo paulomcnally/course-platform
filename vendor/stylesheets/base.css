@@ -29,11 +29,14 @@ ul li.vertical-separator, a.vertical-separator {
   background-color: #CCCCCC;
 }
 
-@media only screen and (max-width : 992px) {
-      header, main, footer {
-        padding-left: 0;
-      }
-    }
+.modal-sign-up {
+  background-color: #EDEFF1;
+  border-radius: 5px;
+}
+
+.modal-sign-up input {
+  color: #355368;
+}
 
 @media only screen and (min-width: 992px) {
   nav .brand-logo {
@@ -44,6 +47,27 @@ ul li.vertical-separator, a.vertical-separator {
 
   header, main, footer {
     padding-left: 300px;
+  }
+
+  .modal-sign-up {
+    width: 420px !important;
+    height: 500px !important;
+    padding-bottom: 0px !important;
+  }
+
+  .modal-sign-up .modal-content .row {
+    padding: 0px !important;
+    margin: 0px !important
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .modal {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    top: 0px !important;
+    border-radius: 0px;
   }
 }
 
@@ -63,4 +87,16 @@ ul.side-nav.fixed li.logo a:hover, ul.side-nav.fixed li.logo a.active {
 
 .button-collapse {
   margin-left: 5px;
+}
+
+.col.s12 > .btn {
+   width: 100%;
+}
+
+.divider-top {
+  margin-top: 25px;
+}
+
+.modal-close {
+  cursor: pointer;
 }
