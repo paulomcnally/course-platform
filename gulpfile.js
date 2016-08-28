@@ -7,7 +7,10 @@ var cleanCSS = require('gulp-clean-css');
 var jsFiles =  [
   'vendor/javascripts/jquery-2.1.1.js',
   'vendor/javascripts/materialize.min.js',
-  'vendor/javascripts/app.js'
+  'vendor/javascripts/angular.min.js',
+  'vendor/javascripts/app.js',
+  'vendor/javascripts/controller-app.js',
+  'vendor/javascripts/controller-auth.js'
 ],
 jsDest = 'app/assets/javascripts';
 
