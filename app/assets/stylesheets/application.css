@@ -55,8 +55,17 @@ ul li.vertical-separator, a.vertical-separator {
   border-radius: 5px;
 }
 
+.modal-sign-up-footer {
+  background-color: #EDEFF1 !important;
+  height: 30px !important;
+}
+
 .modal-sign-up input {
   color: #355368;
+}
+
+h5.modal-title {
+  margin: 0px;
 }
 
 @media only screen and (min-width: 992px) {
@@ -72,7 +81,7 @@ ul li.vertical-separator, a.vertical-separator {
 
   .modal-sign-up {
     width: 420px !important;
-    height: 500px !important;
+    height: 600px !important;
     padding-bottom: 0px !important;
   }
 
