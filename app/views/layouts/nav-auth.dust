@@ -5,7 +5,7 @@
   </a>
 </li>
 <li class="hide-on-large-only">
-  <a href="javascript:void(0)" class="waves-effect waves-teal">
+  <a class="waves-effect waves-teal modal-trigger" href="#modalSignUp">
     <i class="fa fa-user-plus" aria-hidden="true"></i>
     {@message type="content" key="sign_up"/}
   </a>

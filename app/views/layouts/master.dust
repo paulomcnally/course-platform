@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +17,8 @@
     <div class="container">
       {+body /}
     </div>
+
+    {>"layouts/form-sign-up" /}
   </main>
   <!--Import js-->
   <script type="text/javascript" src="/javascripts/application.min.js"></script>
