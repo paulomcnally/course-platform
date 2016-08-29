@@ -14,7 +14,19 @@ const expressValidator = require('express-validator');
 const path = require('path');
 const port = process.env.PORT || 5000;
 const redis = require('redis');
+const lusca = require('lusca');
 const config = require('./config/config.json')[env];
+
+// security
+//app.use(lusca.csrf());
+//app.use(lusca.csp({ /* ... */}));
+app.use(lusca.xframe('SAMEORIGIN'));
+//app.use(lusca.p3p('ABCDEF'));
+app.use(lusca.hsts({
+  maxAge: 31536000
+}));
+app.use(lusca.xssProtection(true));
+app.use(lusca.nosniff());
 
 // view
 let helpers = [
