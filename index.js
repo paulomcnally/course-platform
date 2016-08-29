@@ -37,6 +37,13 @@ if (config.redis.use_env_variable) {
   var redisClient = redis.createClient(config.redis.port, config.redis.host);
 }
 
+// session secret
+if (config.session.secret.use_env_variable) {
+  var sessionSecret = process.env[config.session.secret.use_env_variable];
+} else {
+  var sessionSecret = onfig.session.secret;
+}
+
 // sessions
 app.use(session({
   store: new RedisStore({
