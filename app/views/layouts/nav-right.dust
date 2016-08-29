@@ -1,14 +1,22 @@
-<li class="vertical-separator hide-on-med-and-down">
-</li>
+{?auth}
+<li class="vertical-separator hide-on-med-and-down"></li>
 <li>
-  <a href="javascript:void(0)">
+  <a class="only-text" href="/me/courses">
+    {@message type="content" key="my_courses"/}
+  </a>
+</li>
+{>"layouts/nav-profile" /}
+{:else}
+<li class="vertical-separator hide-on-med-and-down"></li>
+<li>
+  <a class="modal-trigger only-text" href="#modalSignIn">
     {@message type="content" key="sign_in"/}
   </a>
 </li>
-<li class="vertical-separator hide-on-med-and-down">
-</li>
+<li class="vertical-separator hide-on-med-and-down"></li>
 <li>
   <a class="waves-effect waves-light btn modal-trigger" href="#modalSignUp">
     {@message type="content" key="sign_up"/}
   </a>
 </li>
+{/auth}

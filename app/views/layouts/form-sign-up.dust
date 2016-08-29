@@ -1,15 +1,15 @@
 <!-- Modal Structure -->
 <div id="modalSignUp" class="modal modal-sign-up" ng-controller="AuthController">
   <div class="modal-footer modal-sign-up-footer">
-    <i class="fa fa-times fa-2x right modal-close" aria-hidden="true"></i>
+    <i class="fa fa-times-circle-o fa-2x right modal-close" aria-hidden="true"></i>
   </div>
   <div class="modal-content">
     <div ng-show="showSuccess" class="center">
       <img src="/images/ic_success_done.png" alt="Success" />
-      <h5 class="center">{@message type="content" key="success_first"/} <b>{{ user.email }}</b> {@message type="content" key="success_last"/}</h5>
+      <h5 class="center">{@message type="content" key="success_first"/} <b>{{ sign_up.sign_up_email }}</b> {@message type="content" key="success_last"/}</h5>
       <p>{@message type="content" key="success_footer"/}</p>
       <div class="col s12 center">
-        <a href="javascript:void(0)" class="waves-effect waves-green btn btn-large">
+        <a href="#modalSignIn" class="waves-effect waves-green btn btn-large modal-close modal-trigger">
           {@message type="content" key="sign_in"/}
         </a>
       </div>
@@ -20,20 +20,23 @@
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="name" type="text" class="validate" autocomplete="off" ng-model="user.name">
-          <label for="name">{@message type="content" key="name"/}</label>
+          <input id="sign_up_name" type="text" class="validate" autocomplete="off" ng-model="sign_up.sign_up_name">
+          <label for="sign_up_name">{@message type="content" key="name"/}</label>
         </div>
         <div class="input-field col s12">
-          <input id="email" type="email" class="validate" autocomplete="off" ng-model="user.email">
-          <label for="email">{@message type="content" key="email"/}</label>
+          <input id="sign_up_email" type="email" class="validate" autocomplete="off" ng-model="sign_up.sign_up_email">
+          <label for="sign_up_email">{@message type="content" key="email"/}</label>
         </div>
         <div class="input-field col s12">
-          <input id="password" type="password" class="validate" autocomplete="off" ng-model="user.password">
-          <label for="password">{@message type="content" key="password"/}</label>
+          <input id="sign_up_password" type="password" class="validate" autocomplete="off" ng-model="sign_up.sign_up_password">
+          <label for="sign_up_password">{@message type="content" key="password"/}</label>
         </div>
 
         <div class="col s12 center">
-          <a href="javascript:void(0)" class="waves-effect waves-green btn btn-large" ng-click="signUp()">
+          <div ng-show="signUpProgress">
+            <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+          </div>
+          <a ng-hide="signUpProgress" href="javascript:void(0)" class="waves-effect waves-green btn btn-large" ng-click="signUp()">
             {@message type="content" key="sign_up"/}
           </a>
         </div>
@@ -41,7 +44,7 @@
       <div class="divider divider-top"></div>
       <div class="col s12 center">
         <p>
-          {@message type="content" key="have_an_account"/} <a href="#">{@message type="content" key="sign_in"/}</a>
+          {@message type="content" key="have_an_account"/} <a class="modal-close modal-trigger" href="#modalSignIn">{@message type="content" key="sign_in"/}</a>
         </p>
       </div>
     </div>

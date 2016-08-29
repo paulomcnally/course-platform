@@ -16,6 +16,14 @@
       <ul class="side-nav" id="mobile-nav">
         {>"layouts/nav-auth" /}
         {>"layouts/nav-categories" /}
+        {?auth}
+        <li>
+          <a href="/user/logout" class="waves-effect waves-teal">
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+            {@message type="content" key="sign_out" /}
+          </a>
+        </li>
+        {/auth}
       </ul>
     </div>
 

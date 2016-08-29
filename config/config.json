@@ -9,6 +9,9 @@
     "redis": {
       "port": 6379,
       "host": "localhost"
+    },
+    "session": {
+      "secret": "e49e5092f59dffea2eecd2bbd7d2f6a0"
     }
   },
   "test": {
@@ -20,12 +23,20 @@
     "redis": {
       "port": 6379,
       "host": "localhost"
+    },
+    "session": {
+      "secret": "e49e5092f59dffea2eecd2bbd7d2f6a0"
     }
   },
   "production": {
     "use_env_variable": "DATABASE_URL",
     "redis": {
       "use_env_variable": "REDIS_URL"
+    },
+    "session": {
+      "secret": {
+        "use_env_variable": "SESSION_SECRET"
+      }
     }
   }
 }

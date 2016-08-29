@@ -1,3 +1,4 @@
+const env = process.env.NODE_ENV || 'development';
 const express = require('express');
 const app = express();
 const adaro = require('adaro');
@@ -5,13 +6,19 @@ const makara = require('makara');
 const i18n = require('i18n');
 const enrouten = require('express-enrouten');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const RedisStore = require('connect-redis')(session);
 const expressValidator = require('express-validator');
 const path = require('path');
 const port = process.env.PORT || 5000;
+const redis = require('redis');
+const config = require('./config/config.json')[env];
 
 // view
 let helpers = [
-  'dust-makara-helpers'
+  'dust-makara-helpers',
+  'dustjs-helpers-gravatar'
 ];
 app.engine('dust', makara.dust({
   cache: false,
@@ -19,6 +26,26 @@ app.engine('dust', makara.dust({
 }));
 app.set('view engine', 'dust');
 app.set('views','app/views');
+
+// cookie parser
+app.use(cookieParser());
+
+// redis options
+if (config.redis.use_env_variable) {
+  var redisClient = redis.createClient(process.env[config.redis.use_env_variable]);
+} else {
+  var redisClient = redis.createClient(config.redis.port, config.redis.host);
+}
+
+// sessions
+app.use(session({
+  store: new RedisStore({
+    client: redisClient
+  }),
+  secret: config.session.secret,
+  resave: false,
+  saveUninitialized: true
+}))
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({

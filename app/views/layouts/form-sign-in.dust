@@ -1,0 +1,37 @@
+<!-- Modal Structure -->
+<div id="modalSignIn" class="modal modal-sign-in" ng-controller="AuthController">
+  <div class="modal-footer modal-sign-in-footer">
+    <i class="fa fa-times-circle-o fa-2x right modal-close" aria-hidden="true"></i>
+  </div>
+  <div class="modal-content">
+    <div>
+      <div class="center">
+        <h5 class="modal-title">{@message type="content" key="header"/}</h5>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="sign_in_email" type="email" class="validate" autocomplete="off" ng-model="sign_in.sign_in_email">
+          <label for="sign_in_email">{@message type="content" key="email"/}</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="sign_in_password" type="password" class="validate" autocomplete="off" ng-model="sign_in.sign_in_password">
+          <label for="sign_in_password">{@message type="content" key="password"/}</label>
+        </div>
+        <div class="col s12 center">
+          <div ng-show="signInProgress">
+            <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+          </div>
+          <a ng-hide="signInProgress" href="javascript:void(0)" class="waves-effect waves-green btn btn-large" ng-click="signIn()">
+            {@message type="content" key="sign_in"/}
+          </a>
+        </div>
+      </div>
+      <div class="divider divider-top"></div>
+      <div class="col s12 center">
+        <p>
+          {@message type="content" key="dont_have_an_account"/} <a class="modal-close modal-trigger" href="#modalSignUp">{@message type="content" key="sign_up"/}</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

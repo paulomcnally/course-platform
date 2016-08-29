@@ -1,3 +1,4 @@
+{^auth}
 <li class="hide-on-large-only">
   <a href="javascript:void(0)" class="waves-effect waves-teal">
     <i class="fa fa-sign-in" aria-hidden="true"></i>
@@ -10,3 +11,4 @@
     {@message type="content" key="sign_up"/}
   </a>
 </li>
+{/auth}

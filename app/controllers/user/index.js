@@ -6,9 +6,9 @@ module.exports = function (router) {
   // create an user
   router.post('/', function (req, res) {
     // validate post params
-    req.checkBody('name', res.__('user.name.empty')).notEmpty();
-    req.checkBody('email', res.__('user.email.empty')).notEmpty();
-    req.checkBody('password', res.__('user.password.empty')).notEmpty();
+    req.checkBody('sign_up_name', res.__('user.name.empty')).notEmpty();
+    req.checkBody('sign_up_email', res.__('user.email.empty')).notEmpty();
+    req.checkBody('sign_up_password', res.__('user.password.empty')).notEmpty();
 
     // instance validationErrors
     var validationErrors = req.validationErrors();
@@ -20,7 +20,7 @@ module.exports = function (router) {
       // check if email exists
       models.User.findOne({
         where: {
-          email: req.body.email
+          email: req.body.sign_up_email
         }
       }).then(function(user) {
         // if exists show exists message
@@ -33,12 +33,12 @@ module.exports = function (router) {
         } else {
           // create encrypted password with bcrypt
           var salt = bcrypt.genSaltSync(10);
-          var hash = bcrypt.hashSync(req.body.password, salt);
+          var hash = bcrypt.hashSync(req.body.sign_up_password, salt);
 
           // store new user
           models.User.create({
-            name: req.body.name,
-            email: req.body.email,
+            name: req.body.sign_up_name,
+            email: req.body.sign_up_email,
             encrypted_password: hash,
             user_type: 3, // 3 = user
             reset_password_token: randomstring.generate(120),

@@ -29,17 +29,17 @@ ul li.vertical-separator, a.vertical-separator {
   background-color: #CCCCCC;
 }
 
-.modal-sign-up {
+.modal-sign-up, .modal-sign-in {
   background-color: #EDEFF1;
   border-radius: 5px;
 }
 
-.modal-sign-up-footer {
+.modal-sign-up-footer, .modal-sign-in-footer {
   background-color: #EDEFF1 !important;
   height: 30px !important;
 }
 
-.modal-sign-up input {
+.modal-sign-up input, .modal-sign-in input {
   color: #355368;
 }
 
@@ -60,7 +60,15 @@ h5.modal-title {
 
   .modal-sign-up {
     width: 420px !important;
-    height: 600px !important;
+    height: 510px !important;
+    max-height: 510px !important;
+    padding-bottom: 0px !important;
+  }
+
+  .modal-sign-in {
+    width: 420px !important;
+    height: 430px !important;
+    max-height: 430px !important;
     padding-bottom: 0px !important;
   }
 
@@ -99,7 +107,7 @@ ul.side-nav.fixed li.logo a:hover, ul.side-nav.fixed li.logo a.active {
 }
 
 .col.s12 > .btn {
-   width: 100%;
+  width: 100%;
 }
 
 .divider-top {
@@ -108,4 +116,38 @@ ul.side-nav.fixed li.logo a:hover, ul.side-nav.fixed li.logo a.active {
 
 .modal-close {
   cursor: pointer;
+}
+
+i.modal-close {
+  color: #d03a3c;
+}
+
+nav ul a.with-image {
+  padding-left: 20px;
+  padding-right: 20px;
+  min-width: 80px;
+  height: 64px !important;
+}
+
+li.with-hover:hover {
+  height: 64px !important;
+  background-color: #f4f4f4 !important;
+}
+
+nav ul a.only-text {
+  font-weight: 600 !important;
+  color: #333333 !important;
+  white-space: nowrap !important;
+}
+
+nav ul a img {
+  position:absolute;
+  top:0;
+  bottom:0;
+  margin:auto;
+}
+
+.dropdown-content-profile[style] {
+  width: 250px !important;
+  top: 64px !important;
 }

@@ -2,5 +2,7 @@
 	"user.name.empty": "Debes escribir tu nombre completo.",
 	"user.email.empty": "Debes escribir tu correo electrónico.",
 	"user.email.exists": "Ya existe un usuario con este correo electrónico.",
-	"user.password.empty": "Debes escribir una contraseña."
+	"user.email.invalid": "Datos incorrectos.",
+	"user.password.empty": "Debes escribir una contraseña.",
+	"user.password.invalid": "Contraseña incorrecta."
 }

@@ -1,0 +1,34 @@
+<li class="vertical-separator hide-on-med-and-down"></li>
+<li class="with-hover">
+  <a id="actionProfile" data-activates='dropdownProfile' class="with-image" href="/user/edit">
+    <img class="circle responsive-img valign" src="{@gravatar email="{auth.user.email}" s="32" r="g" d="identicon" secure="false" /}" alt="Profile" />
+  </a>
+  <ul id='dropdownProfile' class='dropdown-content dropdown-content-profile'>
+    <li>
+      <a href="#!">
+        {@message type="content" key="my_profile" /}
+      </a>
+    </li>
+    <li>
+      <a href="#!">
+        {@message type="content" key="my_messages" /}
+      </a>
+    </li>
+    <li>
+      <a href="#!">
+        {@message type="content" key="help" /}
+      </a>
+    </li>
+    <li>
+      <a href="#!">
+        {@message type="content" key="history" /}
+      </a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="/user/logout">
+        {@message type="content" key="sign_out" /}
+      </a>
+    </li>
+  </ul>
+</li>

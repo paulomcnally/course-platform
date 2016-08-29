@@ -9530,6 +9530,17 @@ $(document).on('ready', function() {
   $('#searchCancel').on('click', function() {
     $('#searchField').val('');
   });
+
+  $('#actionProfile').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrain_width: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 100, // Spacing from edge
+      belowOrigin: true, // Displays dropdown below the button
+      alignment: 'button' // Displays dropdown with edge aligned to the left of button
+    }
+  );
 });
 
 var httpErrorHandler = function(response) {
@@ -9552,17 +9563,41 @@ app.controller('AuthController', ['$scope', '$http', function($scope, $http) {
   // to show success message
   $scope.showSuccess = false;
 
+  $scope.signUpProgress = false;
+  $scope.signInProgress = false;
+
   // user model
-  $scope.user = {
-    name: '',
-    email: '',
-    password: ''
+  $scope.sign_in = {
+    sign_in_email: '',
+    sign_in_password: ''
+  }
+  $scope.sign_up = {
+    sign_up_name: '',
+    sign_up_email: '',
+    sign_up_password: ''
   };
 
-  // register action
+  // signUp
   $scope.signUp = function() {
-    $http.post('/user', $scope.user).then(function successCallback(response) {
+    $scope.signUpProgress = true;
+    $http.post('/user', $scope.sign_up).then(function successCallback(response) {
       $scope.showSuccess = true;
-    }, httpErrorHandler);
+      $scope.signUpProgress = false;
+    }, function(response) {
+      $scope.signUpProgress = false;
+      httpErrorHandler(response);
+    });
+  }
+
+  // signIn
+  $scope.signIn = function() {
+    $scope.signInProgress = true;
+    $http.post('/user/login', $scope.sign_in).then(function successCallback(response) {
+      window.location.reload();
+      $scope.signInProgress = false;
+    }, function(response) {
+      $scope.signInProgress = false;
+      httpErrorHandler(response);
+    });
   }
 }]);

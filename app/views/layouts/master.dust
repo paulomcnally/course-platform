@@ -19,6 +19,7 @@
     </div>
 
     {>"layouts/form-sign-up" /}
+    {>"layouts/form-sign-in" /}
   </main>
   <!--Import js-->
   <script type="text/javascript" src="/javascripts/application.min.js"></script>
