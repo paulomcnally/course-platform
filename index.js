@@ -41,7 +41,7 @@ if (config.redis.use_env_variable) {
 if (config.session.secret.use_env_variable) {
   var sessionSecret = process.env[config.session.secret.use_env_variable];
 } else {
-  var sessionSecret = onfig.session.secret;
+  var sessionSecret = config.session.secret;
 }
 
 // sessions
@@ -49,7 +49,7 @@ app.use(session({
   store: new RedisStore({
     client: redisClient
   }),
-  secret: config.session.secret,
+  secret: sessionSecret,
   resave: false,
   saveUninitialized: true
 }))
