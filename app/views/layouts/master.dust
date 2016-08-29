@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{@message type="content" key="site.title"/} {+title /}</title>
   <!--Import Google Icon Font-->
-  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import css-->
   <link type="text/css" rel="stylesheet" href="/stylesheets/application.min.css"  media="screen,projection"/>
   {>"layouts/_favicon" /}
