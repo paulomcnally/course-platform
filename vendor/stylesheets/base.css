@@ -76,6 +76,16 @@ h5.modal-title {
     padding: 0px !important;
     margin: 0px !important
   }
+
+  .side-nav li, .side-nav a {
+    height: 38px !important;
+    line-height: 38px !important;
+  }
+
+  .side-nav li>a>[class*=mdi-], .side-nav li>a>[class^=mdi-], .side-nav li>a>i, .side-nav li>a>i.material-icons {
+    line-height: 38px !important;
+    margin: 0 5px 0 0 !important;
+  }
 }
 
 @media only screen and (max-width: 600px) {
