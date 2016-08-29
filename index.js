@@ -27,6 +27,7 @@ app.use(lusca.hsts({
 }));
 app.use(lusca.xssProtection(true));
 app.use(lusca.nosniff());
+app.disable('x-powered-by');
 
 // view
 let helpers = [
