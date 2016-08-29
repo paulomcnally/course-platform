@@ -1,7 +1,7 @@
 <ul class="side-nav fixed hide-on-med-and-down">
   <li class="logo">
     <a id="logo-container" href="/" target="_self" class="brand-logo">
-      <object id="front-page-logo" type="image/svg+xml" data="http://materializecss.com/res/materialize.svg">Your browser does not support SVG</object>
+      <img src="/images/logo_137_104.png" alt="Chocoyo" />
     </a>
   </li>
   {>"layouts/nav-auth" /}
