@@ -1,0 +1,21 @@
+{>"layouts/master" /}
+
+{<title}
+{?course}
+{@message type="content" key=course.slug /}
+{/course}
+{/title}
+
+{<fluidContainer}
+{?course}
+<div class="fluid-course-title">
+  <h4 class="hide-on-med-and-down"><i class="fa {course.icon}" aria-hidden="true"></i> {course.name}</h4>
+  <h5 class="show-on-medium-and-down hide-on-large-only">{course.name}</h5>
+</div>
+{/course}
+{/fluidContainer}
+
+{<body}
+{?course}
+{/course}
+{/body}
