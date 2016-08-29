@@ -1,6 +1,6 @@
 {^auth}
 <li class="hide-on-large-only">
-  <a href="javascript:void(0)" class="waves-effect waves-teal">
+  <a class="waves-effect waves-teal modal-trigger" href="#modalSignIn">
     <i class="fa fa-sign-in" aria-hidden="true"></i>
     {@message type="content" key="sign_in"/}
   </a>
