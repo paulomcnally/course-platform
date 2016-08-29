@@ -6,12 +6,17 @@
   <ul id='dropdownProfile' class='dropdown-content dropdown-content-profile'>
     <li>
       <a href="#!">
-        {@message type="content" key="my_profile" /}
+        {@message type="content" key="profile" /}
       </a>
     </li>
     <li>
       <a href="#!">
-        {@message type="content" key="my_messages" /}
+        {@message type="content" key="wish_list" /}
+      </a>
+    </li>
+    <li>
+      <a href="#!">
+        {@message type="content" key="messages" /}
       </a>
     </li>
     <li>
