@@ -4,6 +4,7 @@ const app = express();
 const adaro = require('adaro');
 const makara = require('makara');
 const i18n = require('i18n');
+const compression = require('compression')
 const enrouten = require('express-enrouten');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -103,6 +104,9 @@ app.use(i18n.init);
 app.use(enrouten({
   directory: 'app/controllers'
 }));
+
+// gzip
+app.use(compression());
 
 // public
 app.use(express.static('app/assets'));
