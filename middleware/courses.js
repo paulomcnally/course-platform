@@ -13,7 +13,7 @@ module.exports = function(req, res, next) {
   })
   .then(function(result) {
     res.locals.courses = result;
-    debug('Cache Hit %s', courses.cacheHit);
+    debug('Cache Hit: %s', courses.cacheHit);
     next();
   });
 }

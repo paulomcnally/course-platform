@@ -183,11 +183,15 @@ nav ul a img {
   top: 64px !important;
 }
 
+.logo-movile {
+  background-color: #8b2a93;
+}
+
 .fluid-course-title {
   padding: 20px;
   background-color: #02a1a5;
 }
 
-.fluid-course-title h4 {
+.fluid-course-title h4, .fluid-course-title h5 {
   color: #ffffff;
 }
