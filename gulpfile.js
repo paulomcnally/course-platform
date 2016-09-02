@@ -15,6 +15,7 @@ var jsFiles =  [
 jsDest = 'app/assets/javascripts';
 
 var cssFiles = [
+  'vendor/stylesheets/material-icons.css',
   'vendor/stylesheets/materialize.min.css',
   'vendor/stylesheets/font-awesome.min.css',
   'vendor/stylesheets/base.css'
