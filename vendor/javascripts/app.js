@@ -1,4 +1,7 @@
 $(document).on('ready', function() {
+  // select
+  $('select').material_select();
+
   // modal
   $('.modal-trigger').leanModal();
 

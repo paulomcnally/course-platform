@@ -9519,6 +9519,9 @@ PATTERNS:[{gSize:3,lgSize:3,maxFrac:3,minFrac:0,minInt:1,negPre:"-",negSuf:"",po
 //# sourceMappingURL=angular.min.js.map
 
 $(document).on('ready', function() {
+  // select
+  $('select').material_select();
+
   // modal
   $('.modal-trigger').leanModal();
 

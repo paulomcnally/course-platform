@@ -1,0 +1,70 @@
+{>"layouts/master" /}
+
+{<title}
+{@message type="content" key="title" /}
+{/title}
+
+{<body}
+<div class="separator-20"></div>
+<div class="row white">
+  <div class="col s12">
+    <div class="row">
+      <nav class="nav-no-box-shadow">
+        <div class="nav-wrapper">
+          <ul>
+            <li>
+              <a href="/admin/courses/new/{categorySlug}">
+                <i class="material-icons">keyboard_arrow_left</i>
+              </a>
+            </li>
+            <li>
+              <h5>{course.name} • {subCourse.name} • {@message type="content" key="title" /}</h5>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s10 offset-s1">
+            <select>
+              <option value="" disabled selected>{@message type="content" key="field_category_option_first" /}</option>
+              {?courses}
+              {#courses}
+              <option value="{id}">{name}</option>
+              {/courses}
+              {/courses}
+            </select>
+            <label>{@message type="content" key="field_category" /}</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s10 offset-s1">
+            <input id="name" type="text" class="validate">
+            <label for="name">{@message type="content" key="field_title" /}</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s10 offset-s1">
+            <input id="name" type="text" class="validate">
+            <label for="name">{@message type="content" key="field_short_description" /}</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s10 offset-s1">
+            <textarea id="textarea1" class="materialize-textarea"></textarea>
+            <label for="textarea1">{@message type="content" key="field_description" /}</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s10 offset-s1">
+            <a class="waves-effect waves-light btn right">{@message type="content" key="button_save" /}</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{/body}
