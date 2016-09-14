@@ -83,7 +83,7 @@ a.vertical-separator {
 
 ul li.vertical-separator, a.vertical-separator {
   width: 1px;
-  min-height: 64px;
+  min-height: 48px;
   background-color: #CCCCCC;
 }
 
@@ -156,6 +156,13 @@ h5.modal-title {
   }
 }
 
+@media only screen and (min-width: 601px) {}
+  nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+      height: 48px !important;
+      line-height: 48px !important;
+  }
+}
+
 ul.side-nav.fixed li.logo {
   text-align: center;
   margin-top: 32px;
@@ -167,7 +174,7 @@ ul.side-nav.fixed li.logo a:hover, ul.side-nav.fixed li.logo a.active {
 }
 
 .input-field-search {
-  height: 64px !important;
+  height: 48px !important;
 }
 
 .button-collapse {
@@ -194,11 +201,11 @@ nav ul a.with-image {
   padding-left: 20px;
   padding-right: 20px;
   min-width: 72px;
-  height: 64px !important;
+  height: 48px !important;
 }
 
 li.with-hover:hover {
-  height: 64px !important;
+  height: 48px !important;
   background-color: #f4f4f4 !important;
 }
 
@@ -217,7 +224,7 @@ nav ul a img {
 
 .dropdown-content-profile[style] {
   width: 250px !important;
-  top: 64px !important;
+  top: 48px !important;
 }
 
 .logo-movile {

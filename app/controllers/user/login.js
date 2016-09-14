@@ -27,7 +27,8 @@ module.exports = function (router) {
           if (bcrypt.compareSync(req.body.sign_in_password, user.encrypted_password)) {
             req.session.user = {
               id: user.id,
-              email: user.email
+              email: user.email,
+              user_type: user.user_type
             };
             res.json(req.session.user);
           } else {
