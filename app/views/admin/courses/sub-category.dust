@@ -7,17 +7,17 @@
 {<body}
 <div class="row white">
   <ul class="collection with-header">
-    <li class="collection-header">
-      <nav class="nav-no-box-shadow">
+    <li class="collection-header teal">
+      <nav class="nav-no-box-shadow teal">
         <div class="nav-wrapper">
           <ul>
             <li>
-              <a href="/admin/courses/new">
+              <a class="white-text" href="/admin/courses/new">
                 <i class="material-icons">keyboard_arrow_left</i>
               </a>
             </li>
             <li>
-              <h5>{course.name} • {@message type="content" key="title" /}</h5>
+              <h5 class="white-text">{course.name} • {@message type="content" key="title" /}</h5>
             </li>
           </ul>
         </div>

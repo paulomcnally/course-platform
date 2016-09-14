@@ -7,60 +7,71 @@
 {<body}
 <div class="separator-20"></div>
 <div class="row white">
-  <div class="col s12">
-    <div class="row">
-      <nav class="nav-no-box-shadow">
+  <ul class="collection with-header">
+    <li class="collection-header teal">
+      <nav class="nav-no-box-shadow teal">
         <div class="nav-wrapper">
           <ul>
             <li>
-              <a href="/admin/courses/new/{categorySlug}">
+              <a class="white-text" href="/admin/courses/new/{categorySlug}">
                 <i class="material-icons">keyboard_arrow_left</i>
               </a>
             </li>
             <li>
-              <h5>{course.name} • {subCourse.name} • {@message type="content" key="title" /}</h5>
+              <h5 class="white-text">{course.name} • {subCourse.name} • {@message type="content" key="title" /}</h5>
             </li>
           </ul>
         </div>
-      </nav>
-    </div>
-
+      </li>
+    </ul>
+  <div class="col s12">
     <div class="row">
       <form class="col s12">
         <div class="row">
           <div class="input-field col s10 offset-s1">
-            <select>
-              <option value="" disabled selected>{@message type="content" key="field_category_option_first" /}</option>
-              {?courses}
-              {#courses}
-              <option value="{id}">{name}</option>
-              {/courses}
-              {/courses}
-            </select>
-            <label>{@message type="content" key="field_category" /}</label>
+            <input id="title" name="title" type="text" class="validate" length="255">
+            <label for="title">{@message type="content" key="field_title" /}</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s10 offset-s1">
-            <input id="name" type="text" class="validate">
-            <label for="name">{@message type="content" key="field_title" /}</label>
+            <input id="short_description" name="short_description" type="text" class="validate" length="255">
+            <label for="short_description">{@message type="content" key="field_short_description" /}</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s10 offset-s1">
-            <input id="name" type="text" class="validate">
-            <label for="name">{@message type="content" key="field_short_description" /}</label>
+            <textarea id="description" name="description" class="materialize-textarea" length="9000"></textarea>
+            <label for="description">{@message type="content" key="field_description" /}</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s10 offset-s1">
-            <textarea id="textarea1" class="materialize-textarea"></textarea>
-            <label for="textarea1">{@message type="content" key="field_description" /}</label>
+            <p class="bold">{@message type="content" key="level_caption" /}</p>
+            <p>{@message type="content" key="level_description" /}</p>
+            <ul>
+              <li>
+                <input class="with-gap" name="level" type="radio" id="level1"  />
+                <label for="level1">{@message type="content" key="level_basic" /}</label>
+              </li>
+              <li>
+                <input class="with-gap" name="level" type="radio" id="level2"  />
+                <label for="level2">{@message type="content" key="level_intermediate" /}</label>
+              </li>
+              <li>
+                <input class="with-gap" name="level" type="radio" id="level3"  />
+                <label for="level3">{@message type="content" key="level_advanced" /}</label>
+              </li>
+              <li>
+                <input class="with-gap" name="level" type="radio" id="level4"  />
+                <label for="level4">{@message type="content" key="level_all" /}</label>
+              </li>
+            </ul>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s10 offset-s1">
-            <a class="waves-effect waves-light btn right">{@message type="content" key="button_save" /}</a>
+            <a class="waves-effect waves-light btn right green"><i class="material-icons left">save</i>{@message type="content" key="button_save" /}</a>
           </div>
         </div>
       </form>

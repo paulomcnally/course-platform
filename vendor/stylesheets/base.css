@@ -196,3 +196,11 @@ nav ul a img {
 	-moz-box-shadow: none !important;
 	box-shadow: none !important;
 }
+
+.nav-border-bottom {
+  box-shadow: 0 2px 2px -2px gray !important;
+}
+
+.bold {
+  font-weight: bold;
+}
