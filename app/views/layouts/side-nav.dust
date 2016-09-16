@@ -4,6 +4,10 @@
       <img src="/images/logo_137_104.png" alt="Chocoyo" />
     </a>
   </li>
+  {?auth.isAdmin}
+  {>"layouts/nav-admin" /}
+  {:else}
   {>"layouts/nav-auth" /}
   {>"layouts/nav-categories" /}
+  {/auth.isAdmin}
 </ul>

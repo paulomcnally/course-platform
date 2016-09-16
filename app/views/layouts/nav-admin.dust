@@ -1,0 +1,18 @@
+<li>
+  <a class="waves-effect waves-teal modal-trigger" href="/admin/courses">
+    <i class="material-icons">ondemand_video</i>
+    {@message type="content" key="courses"/}
+  </a>
+</li>
+<li>
+  <a class="waves-effect waves-teal modal-trigger" href="/admin/reports">
+    <i class="material-icons">insert_chart</i>
+    {@message type="content" key="reports"/}
+  </a>
+</li>
+<li>
+  <a class="waves-effect waves-teal modal-trigger" href="/admin/users">
+    <i class="material-icons">supervisor_account</i>
+    {@message type="content" key="users"/}
+  </a>
+</li>
