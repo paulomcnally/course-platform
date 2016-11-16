@@ -124,6 +124,11 @@ app.use(compression());
 // public
 app.use(express.static('app/assets'));
 
+// 404 default
+app.get('*', (req, res) => {
+  res.redirect('/');
+});
+
 // listen
 app.listen(port, () => {
   console.log(`App listening on port ${port}!`);

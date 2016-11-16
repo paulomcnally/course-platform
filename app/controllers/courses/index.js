@@ -15,10 +15,14 @@ module.exports = function (router) {
       },
     })
     .then(function(category) {
-      debug('Cache Hit: %s', category.cacheHit);
-      res.render('courses/index', {
-        category: category
-      });
+      if (category) {
+        debug('Cache Hit: %s', category.cacheHit);
+        res.render('courses/index', {
+          category: category
+        });
+      } else {
+        res.render('courses/index');
+      }
     });
   });
 };
