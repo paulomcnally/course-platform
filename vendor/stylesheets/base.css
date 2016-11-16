@@ -181,3 +181,26 @@ nav ul a img {
 .fluid-course-title h4, .fluid-course-title h5 {
   color: #ffffff;
 }
+
+.separator-20 {
+  margin: 20px;
+}
+
+.container-page {
+  width: 85% !important;
+  margin: 20px auto !important;
+}
+
+.nav-no-box-shadow {
+  -webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+.nav-border-bottom {
+  box-shadow: 0 2px 2px -2px gray !important;
+}
+
+.bold {
+  font-weight: bold;
+}

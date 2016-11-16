@@ -9,18 +9,23 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       icon: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       icon_type: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       name: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       slug: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       active: {
+        allowNull: false,
         type: Sequelize.BOOLEAN
       },
       createdAt: {

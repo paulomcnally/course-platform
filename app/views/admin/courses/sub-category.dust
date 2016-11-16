@@ -1,0 +1,49 @@
+{>"layouts/master" /}
+
+{<title}
+{@message type="content" key="title" /}
+{/title}
+
+{<body}
+<div class="row white">
+  <ul class="collection with-header">
+    <li class="collection-header teal">
+      <nav class="nav-no-box-shadow teal">
+        <div class="nav-wrapper">
+          <ul>
+            <li>
+              <a class="white-text" href="/admin/courses/new">
+                <i class="material-icons">arrow_back</i>
+              </a>
+            </li>
+            <li>
+              <h5 class="white-text">{course.name} • {@message type="content" key="title" /}</h5>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </li>
+    {?subCourses}
+    {#subCourses}
+    <li class="collection-item">
+      <div>
+        <a  href="/admin/courses/new/{categorySlug}/{slug}">
+          {name}
+        </a>
+        <a href="/admin/courses/new/{categorySlug}/{slug}" class="secondary-content">
+          <i class="material-icons">keyboard_arrow_right</i>
+        </a>
+      </div>
+    </li>
+    {/subCourses}
+    {:else}
+    <li class="collection-item">
+      <div class="card-panel red center-align">
+        <span class="white-text">{@message type="content" key="empty" /}
+        </span>
+      </div>
+    </li>
+    {/subCourses}
+  </ul>
+</div>
+{/body}

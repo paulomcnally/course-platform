@@ -4,6 +4,7 @@ module.exports = {
   up: function (queryInterface, Sequelize) {
     return queryInterface.bulkInsert('Courses', [
       {
+        id: 1,
         icon: 'fa-code',
         icon_type: 'fontawesome',
         name: 'Desarrollo',
@@ -14,6 +15,7 @@ module.exports = {
         parent_id: 0
       },
       {
+        id: 2,
         icon: 'fa-code',
         icon_type: 'fontawesome',
         name: 'Negocios',
@@ -24,6 +26,7 @@ module.exports = {
         parent_id: 0
       },
       {
+        id: 3,
         icon: 'fa-code',
         icon_type: 'fontawesome',
         name: 'Informática y software',
@@ -34,6 +37,7 @@ module.exports = {
         parent_id: 0
       },
       {
+        id: 4,
         icon: 'fa-code',
         icon_type: 'fontawesome',
         name: 'Productividad en la oficina',
@@ -44,6 +48,7 @@ module.exports = {
         parent_id: 0
       },
       {
+        id: 5,
         icon: 'fa-code',
         icon_type: 'fontawesome',
         name: 'Desarrollo personal',
@@ -54,6 +59,7 @@ module.exports = {
         parent_id: 0
       },
       {
+        id: 6,
         icon: 'fa-code',
         icon_type: 'fontawesome',
         name: 'Diseño',
@@ -64,6 +70,7 @@ module.exports = {
         parent_id: 0
       },
       {
+        id: 7,
         icon: 'fa-code',
         icon_type: 'fontawesome',
         name: 'Marketing',
@@ -74,6 +81,7 @@ module.exports = {
         parent_id: 0
       },
       {
+        id: 8,
         icon: 'fa-code',
         icon_type: 'fontawesome',
         name: 'Estilo de vida',
@@ -84,6 +92,7 @@ module.exports = {
         parent_id: 0
       },
       {
+        id: 9,
         icon: 'fa-code',
         icon_type: 'fontawesome',
         name: 'Fotografía',
@@ -94,6 +103,7 @@ module.exports = {
         parent_id: 0
       },
       {
+        id: 10,
         icon: 'fa-code',
         icon_type: 'fontawesome',
         name: 'Salud y fitness',
@@ -104,6 +114,7 @@ module.exports = {
         parent_id: 0
       },
       {
+        id: 11,
         icon: 'fa-code',
         icon_type: 'fontawesome',
         name: 'Formación de profesorado',
@@ -114,6 +125,7 @@ module.exports = {
         parent_id: 0
       },
       {
+        id: 12,
         icon: 'fa-code',
         icon_type: 'fontawesome',
         name: 'Música',
@@ -124,6 +136,7 @@ module.exports = {
         parent_id: 0
       },
       {
+        id: 13,
         icon: 'fa-code',
         icon_type: 'fontawesome',
         name: 'Estudios académicos',
@@ -134,6 +147,7 @@ module.exports = {
         parent_id: 0
       },
       {
+        id: 14,
         icon: 'fa-code',
         icon_type: 'fontawesome',
         name: 'Idioma',
@@ -144,6 +158,7 @@ module.exports = {
         parent_id: 0
       },
       {
+        id: 15,
         icon: 'fa-code',
         icon_type: 'fontawesome',
         name: 'Preparación para exámenes oficiales',
