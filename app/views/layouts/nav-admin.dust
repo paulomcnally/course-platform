@@ -1,6 +1,6 @@
 <li>
   <a class="waves-effect waves-teal modal-trigger" href="/admin/courses">
-    <i class="material-icons">ondemand_video</i>
+    <i class="material-icons">list</i>
     {@message type="content" key="courses"/}
   </a>
 </li>

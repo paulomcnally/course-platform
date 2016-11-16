@@ -18,7 +18,7 @@
               </a>
             </li>
             <li>
-              <h5 class="white-text">{course.name} • {subCourse.name} • {@message type="content" key="title" /}</h5>
+              <h5 class="white-text">{category.name} • {subCategory.name} • {@message type="content" key="title" /}</h5>
             </li>
           </ul>
         </div>

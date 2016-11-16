@@ -1,10 +1,10 @@
-{?courses}
-{#courses}
+{?categories}
+{#categories}
 <li>
   <a href="/courses/{slug}" class="waves-effect waves-teal">
     <i class="fa {icon}" aria-hidden="true"></i>
     {@message type="content" key=slug /}
   </a>
 </li>
-{/courses}
-{/courses}
+{/categories}
+{/categories}

@@ -1,27 +1,27 @@
-const debug = require('debug')('app:controller:admin:courses');
-const middlewareCourses = require('../../../../middleware/courses');
+const debug = require('debug')('app:controller:admin:categories');
+const middlewareCategories = require('../../../../middleware/categories');
 const middlewareAuth = require('../../../../middleware/auth');
 const models = require('../../../../models');
 
 module.exports = function (router) {
-  router.get('/', middlewareCourses, middlewareAuth, function (req, res) {
+  router.get('/', middlewareCategories, middlewareAuth, function (req, res) {
     res.render('admin/courses/category');
   });
 
-  router.get('/:categorySlug', middlewareCourses, middlewareAuth, function (req, res) {
-    models.Course.findOne({
+  router.get('/:categorySlug', middlewareCategories, middlewareAuth, function (req, res) {
+    models.Category.findOne({
       where: {
         slug: req.params.categorySlug
       }
-    }).then(function(course) {
-      models.Course.findAll({
+    }).then(function(category) {
+      models.Category.findAll({
         where: {
-          parent_id: course.id
+          parentId: category.id
         }
-      }).then(function(subCourses) {
+      }).then(function(subCategories) {
         res.render('admin/courses/sub-category', {
-          course: course,
-          subCourses: subCourses,
+          category: category,
+          subCategories: subCategories,
           categorySlug: req.params.categorySlug
         });
       })
@@ -29,20 +29,20 @@ module.exports = function (router) {
     });
   });
 
-  router.get('/:categorySlug/:subCategorySlug', middlewareCourses, middlewareAuth, function (req, res) {
-    models.Course.findOne({
+  router.get('/:categorySlug/:subCategorySlug', middlewareCategories, middlewareAuth, function (req, res) {
+    models.Category.findOne({
       where: {
         slug: req.params.categorySlug
       }
-    }).then(function(course) {
-      models.Course.findOne({
+    }).then(function(category) {
+      models.Category.findOne({
         where: {
           slug: req.params.subCategorySlug
         }
-      }).then(function(subCourse) {
+      }).then(function(subCategory) {
         res.render('admin/courses/new', {
-          course: course,
-          subCourse: subCourse,
+          category: category,
+          subCategory: subCategory,
           categorySlug: req.params.categorySlug,
           subCategorySlug: req.params.subCategorySlug
         });

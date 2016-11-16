@@ -1,23 +1,23 @@
-const debug = require('debug')('app:controller:courses');
-const middlewareCourses = require('../../../middleware/courses');
+const debug = require('debug')('app:controller:categories');
+const middlewareCategories = require('../../../middleware/categories');
 const middlewareAuth = require('../../../middleware/auth');
 const models = require('../../../models');
 
 module.exports = function (router) {
-  router.get('/:slug', middlewareCourses, middlewareAuth, function (req, res) {
-    var courses = models.cacher('Course')
+  router.get('/:slug', middlewareCategories, middlewareAuth, function (req, res) {
+    var categories = models.cacher('Category')
     .ttl(models.ttl);
 
-    courses.findOne({
+    categories.findOne({
       where: {
         slug: req.params.slug,
         active: true
       },
     })
-    .then(function(course) {
-      debug('Cache Hit: %s', courses.cacheHit);
+    .then(function(category) {
+      debug('Cache Hit: %s', category.cacheHit);
       res.render('courses/index', {
-        course: course
+        category: category
       });
     });
   });

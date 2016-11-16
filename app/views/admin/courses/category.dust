@@ -23,8 +23,8 @@
         </div>
       </nav>
     </li>
-    {?courses}
-    {#courses}
+    {?categories}
+    {#categories}
     <li class="collection-item">
       <div>
         <a  href="/admin/courses/new/{slug}">
@@ -35,8 +35,8 @@
         </a>
       </div>
     </li>
-    {/courses}
-    {/courses}
+    {/categories}
+    {/categories}
   </ul>
 </div>
 {/body}

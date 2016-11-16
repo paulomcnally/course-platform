@@ -1,12 +1,12 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
-  var Course = sequelize.define('Course', {
+  var Category = sequelize.define('Category', {
     icon: DataTypes.STRING,
-    icon_type: DataTypes.STRING,
+    iconType: DataTypes.STRING,
     name: DataTypes.STRING,
     slug: DataTypes.STRING,
     active: DataTypes.BOOLEAN,
-    parent_id: DataTypes.INTEGER
+    parentId: DataTypes.INTEGER
   }, {
     classMethods: {
       associate: function(models) {
@@ -14,5 +14,5 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  return Course;
+  return Category;
 };

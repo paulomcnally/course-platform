@@ -17,14 +17,14 @@
               </a>
             </li>
             <li>
-              <h5 class="white-text">{course.name} • {@message type="content" key="title" /}</h5>
+              <h5 class="white-text">{category.name} • {@message type="content" key="title" /}</h5>
             </li>
           </ul>
         </div>
       </nav>
     </li>
-    {?subCourses}
-    {#subCourses}
+    {?subCategories}
+    {#subCategories}
     <li class="collection-item">
       <div>
         <a  href="/admin/courses/new/{categorySlug}/{slug}">
@@ -35,7 +35,7 @@
         </a>
       </div>
     </li>
-    {/subCourses}
+    {/subCategories}
     {:else}
     <li class="collection-item">
       <div class="card-panel red center-align">
@@ -43,7 +43,7 @@
         </span>
       </div>
     </li>
-    {/subCourses}
+    {/subCategories}
   </ul>
 </div>
 {/body}

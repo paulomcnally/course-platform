@@ -1,8 +1,8 @@
-const middlewareCourses = require('../../middleware/courses');
+const middlewareCategories = require('../../middleware/categories');
 const middlewareAuth = require('../../middleware/auth');
 
 module.exports = function (router) {
-  router.get('/', middlewareCourses, middlewareAuth, function (req, res) {
+  router.get('/', middlewareCategories, middlewareAuth, function (req, res) {
     res.render('index');
   });
 };
