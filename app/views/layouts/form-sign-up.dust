@@ -28,6 +28,10 @@
           <label for="sign_up_email">{@message type="content" key="email"/}</label>
         </div>
         <div class="input-field col s12">
+          <input id="sign_up_code" type="text" class="validate" autocomplete="off" ng-model="sign_up.sign_up_code">
+          <label for="sign_up_code">{@message type="content" key="code"/}</label>
+        </div>
+        <div class="input-field col s12">
           <input id="sign_up_password" type="password" class="validate" autocomplete="off" ng-model="sign_up.sign_up_password">
           <label for="sign_up_password">{@message type="content" key="password"/}</label>
         </div>

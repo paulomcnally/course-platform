@@ -1,39 +1,24 @@
 'use strict';
 module.exports = {
   up: function(queryInterface, Sequelize) {
-    return queryInterface.createTable('Courses', {
+    return queryInterface.createTable('Codes', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      title: {
+      name: {
         type: Sequelize.STRING,
         allowNull: false
       },
-      shortDescription: {
+      value: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        unique: true
       },
-      description: {
-        type: Sequelize.TEXT,
-        allowNull: false
-      },
-      level: {
+      max: {
         type: Sequelize.INTEGER,
-        allowNull: false
-      },
-      thumbnail: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      video: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      active: {
-        type: Sequelize.BOOLEAN,
         allowNull: false
       },
       createdAt: {
@@ -47,6 +32,6 @@ module.exports = {
     });
   },
   down: function(queryInterface, Sequelize) {
-    return queryInterface.dropTable('Courses');
+    return queryInterface.dropTable('Codes');
   }
 };

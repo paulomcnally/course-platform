@@ -14,7 +14,8 @@ app.controller('AuthController', ['$scope', '$http', function($scope, $http) {
   $scope.sign_up = {
     sign_up_name: '',
     sign_up_email: '',
-    sign_up_password: ''
+    sign_up_password: '',
+    sign_up_code: ''
   };
 
   // signUp

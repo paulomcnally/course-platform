@@ -39,8 +39,17 @@ module.exports = function(sequelize, DataTypes) {
         notEmpty: true
       }
     },
-    active: DataTypes.BOOLEAN
-  }, {
+    active: {
+      type: DataTypes.STRING,
+    },
+    code: {
+      type: DataTypes.BOOLEAN,
+      validate: {
+        notEmpty: true
+      }
+    },
+  },
+  {
     classMethods: {
       associate: function(models) {
         // associations can be defined here

@@ -15,6 +15,7 @@ module.exports = {
         user_type: 1,
         reset_password_token: randomstring.generate(120),
         verification_token: randomstring.generate(120),
+        code: 'SUPER_ADMIN',
         active: true,
         createdAt: new Date(),
         updatedAt: new Date()

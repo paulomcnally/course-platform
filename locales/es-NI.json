@@ -4,5 +4,8 @@
 	"user.email.exists": "Ya existe un usuario con este correo electrónico.",
 	"user.email.invalid": "Datos incorrectos.",
 	"user.password.empty": "Debes escribir una contraseña.",
-	"user.password.invalid": "Contraseña incorrecta."
+	"user.password.invalid": "Contraseña incorrecta.",
+	"user.code.empty": "Debes escribir un código.",
+	"user.code.does.not.exists": "El código no existe.",
+	"generic.server.error": "Error al procesar la solicitud."
 }

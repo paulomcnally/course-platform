@@ -10,31 +10,32 @@ module.exports = {
       },
       name: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
       },
       email: {
         type: Sequelize.STRING,
         allowNull: false,
+        unique: true
       },
       encrypted_password: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
       },
       user_type: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: false
       },
       reset_password_token: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
       },
       verification_token: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
       },
       active: {
         type: Sequelize.BOOLEAN,
-        allowNull: false,
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
