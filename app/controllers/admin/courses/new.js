@@ -1,14 +1,15 @@
 const debug = require('debug')('app:controller:admin:categories');
 const middlewareCategories = require('../../../../middleware/categories');
 const middlewareAuth = require('../../../../middleware/auth');
+const middlewareAdmin = require('../../../../middleware/admin');
 const models = require('../../../../models');
 
 module.exports = function (router) {
-  router.get('/', middlewareCategories, middlewareAuth, function (req, res) {
+  router.get('/', middlewareCategories, middlewareAuth, middlewareAdmin, function (req, res) {
     res.render('admin/courses/category');
   });
 
-  router.get('/:categorySlug', middlewareCategories, middlewareAuth, function (req, res) {
+  router.get('/:categorySlug', middlewareCategories, middlewareAuth, middlewareAdmin, function (req, res) {
     models.Category.findOne({
       where: {
         slug: req.params.categorySlug
@@ -29,7 +30,7 @@ module.exports = function (router) {
     });
   });
 
-  router.get('/:categorySlug/:subCategorySlug', middlewareCategories, middlewareAuth, function (req, res) {
+  router.get('/:categorySlug/:subCategorySlug', middlewareCategories, middlewareAuth, middlewareAdmin, function (req, res) {
     models.Category.findOne({
       where: {
         slug: req.params.categorySlug
