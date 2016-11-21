@@ -7,5 +7,13 @@
 	"user.password.invalid": "Contraseña incorrecta.",
 	"user.code.empty": "Debes escribir un código.",
 	"user.code.does.not.exists": "El código no existe.",
-	"generic.server.error": "Error al procesar la solicitud."
+	"generic.server.error": "Error al procesar la solicitud.",
+	"course.short_description.empty": "Debes escribir una descripción corta.",
+	"course.description.empty": "Debes escribir una descripción.",
+	"course.level.empty": "Debes seleccionar un nivel.",
+	"course.thumbnail.empty": "Debes asignar una imágen.",
+	"course.video.empty": "Debes asignar un video.",
+	"course.category_id.empty": "No se asignó una categoría.",
+	"course.sub_category_id.empty": "No se asignó una sub-categoría.",
+	"course.title.empty": "Debes escribir un título."
 }

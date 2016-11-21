@@ -13,6 +13,37 @@
   <h5 class="show-on-medium-and-down hide-on-large-only">{category.name}</h5>
 </div>
 {/category}
+
+{?courses}
+<div class="row">
+  {#courses}
+  <div class="col s12 m3">
+    <div class="card small sticky-action">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="{thumbnail}">
+      </div>
+      <div class="card-content card-content-small">
+        <span class="card-title activator grey-text text-darken-4 card-title-small">
+          {title}
+        </span>
+      </div>
+      <div class="card-reveal card-content-small">
+        <div style="position: relative; overflow: hidden;">
+          <span class="card-title grey-text text-darken-4 right">
+            <i class="material-icons ">close</i>
+          </span>
+        </div>
+        <p style="text-align: justify;">{shortDescription}</p>
+      </div>
+      <div class="card-action card-content-small">
+        <a class="btn waves-effect waves-light" href="/course/{id}">{@message type="content" key="item-link" /}</a>
+      </div>
+    </div>
+  </div>
+  {/courses}
+</div>
+{/courses}
+
 {/fluidContainer}
 
 {<body}

@@ -17,8 +17,15 @@ module.exports = function (router) {
     .then(function(category) {
       if (category) {
         debug('Cache Hit: %s', category.cacheHit);
-        res.render('courses/index', {
-          category: category
+        models.Course.findAll({
+          where: {
+            categoryId: category.id
+          }
+        }).then(function(courses) {
+          res.render('courses/index', {
+            category: category,
+            courses: courses
+          });
         });
       } else {
         res.render('courses/index');

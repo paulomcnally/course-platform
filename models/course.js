@@ -7,6 +7,8 @@ module.exports = function(sequelize, DataTypes) {
     level: DataTypes.INTEGER,
     thumbnail: DataTypes.STRING,
     video: DataTypes.STRING,
+    categoryId: DataTypes.INTEGER,
+    subCategoryId: DataTypes.INTEGER,
     active: DataTypes.BOOLEAN
   }, {
     classMethods: {

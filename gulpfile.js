@@ -10,7 +10,8 @@ var jsFiles =  [
   'vendor/javascripts/angular.min.js',
   'vendor/javascripts/app.js',
   'vendor/javascripts/controller-app.js',
-  'vendor/javascripts/controller-auth.js'
+  'vendor/javascripts/controller-auth.js',
+  'vendor/javascripts/controller-course.js'
 ],
 jsDest = 'app/assets/javascripts';
 

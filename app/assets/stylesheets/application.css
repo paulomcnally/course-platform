@@ -262,3 +262,15 @@ nav ul a img {
 .bold {
   font-weight: bold;
 }
+
+.card-content-small {
+  padding: 10px !important;
+}
+
+.card-title-small {
+  line-height: 1.3 !important;
+  font-weight: bold !important;
+  font-size: 13px !important;
+  min-height: 33px !important;
+  padding: 0 !important;
+}
